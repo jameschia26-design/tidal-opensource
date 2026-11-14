@@ -106,11 +106,11 @@ export default function Landing() {
             <a href="#singapore-gst" className={styles.navLink}>
               Singapore GST
             </a>
-            <Link href="/login" className={styles.signIn}>
-              Sign in
-            </Link>
+            <a href="https://github.com/jameschia26-design/tidal-opensource" className={styles.signIn}>
+              Open source
+            </a>
             <Link href="/signup" className={styles.navCta}>
-              Try the preview <Arrow diagonal />
+              Try the demo <Arrow diagonal />
             </Link>
           </nav>
         </div>
@@ -122,22 +122,22 @@ export default function Landing() {
           <div className={styles.heroCopy}>
             <div className={styles.pillBadge}>
               <span className={styles.pillDot} />
-              <span>SINGAPORE BUSINESS ACCOUNTING · IRAS &amp; GST READY</span>
+              <span>FREE, OPEN-SOURCE ACCOUNTING FOR SMALL BUSINESSES</span>
             </div>
             <h1 id="hero-title">
-              Your accounts.<br />
-              <em>In order.</em>
+              Your books.<br />
+              <em>Your control.</em>
             </h1>
             <p className={styles.lead}>
-              Fast, focused bookkeeping designed specifically for Singapore businesses. Create tax invoices, track billable expenses, and calculate IRAS GST Form 5 figures without enterprise clutter.
+              Tidal is free accounting software built to support small companies. Use the hosted demo, or self-host it on infrastructure your organization operates—without a Tidal subscription or handing your books to a hosted accounting platform. Your hosting provider may still access infrastructure it manages.
             </p>
 
             <div className={styles.actions}>
               <Link href="/signup" className={styles.primary}>
-                Try the preview <Arrow />
+                Try the demo <Arrow />
               </Link>
-              <a href="#features" className={styles.secondaryLink}>
-                Explore features <span aria-hidden="true">↓</span>
+              <a href="https://github.com/jameschia26-design/tidal-opensource" className={styles.secondaryLink}>
+                Get the free source <Arrow diagonal />
               </a>
             </div>
 
@@ -149,7 +149,7 @@ export default function Landing() {
                 <CheckIcon /> Double-entry ledger
               </span>
               <span className={styles.trustItem}>
-                <CheckIcon /> Multi-entity ready
+                <CheckIcon /> Self-hostable
               </span>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function Landing() {
               <em>Zero clutter.</em>
             </h2>
             <p>
-              Run day-to-day billing, payables, and IRAS compliance from one fast, responsive interface built with modern performance in mind.
+              Free, open-source tools for the everyday work of a small business. Run Tidal yourself to choose where your accounting database is hosted and who administers it.
             </p>
           </div>
 
@@ -382,27 +382,27 @@ export default function Landing() {
         <section className={styles.closing} aria-labelledby="closing-title">
           <div className={styles.closingContent}>
             <div className={styles.closingTop}>
-              <span className={styles.closingPill}>GET STARTED WITH TIDAL</span>
+              <span className={styles.closingPill}>FREE AND OPEN SOURCE</span>
               <span className={styles.closingArrow} aria-hidden="true">
                 ↗
               </span>
             </div>
             <div className={styles.closingMain}>
               <h2 id="closing-title">
-                Experience clean,<br />
-                <em>focused accounting.</em>
+                Accounting for small teams.<br />
+                <em>On your terms.</em>
               </h2>
               <div className={styles.closingActions}>
-                <Link href="/signup" className={styles.lightCta}>
-                  Try the preview <Arrow />
-                </Link>
-                <Link href="/login" className={styles.ghostCta}>
-                  Sign in
+                <a href="https://github.com/jameschia26-design/tidal-opensource" className={styles.lightCta}>
+                  Explore the source <Arrow diagonal />
+                </a>
+                <Link href="/signup" className={styles.ghostCta}>
+                  Try the demo
                 </Link>
               </div>
             </div>
             <p className={styles.previewNote}>
-              Tidal is currently in preview for Singapore businesses. Invoices, quotes, expenses, reports, and tax worksheets are ready for testing.
+              The hosted version is a demo, not for real company books. Want to deploy Tidal for your organization? Contact the project administrator through the project repository for support. Tidal's source is free; your own hosting and operations may have costs.
             </p>
           </div>
         </section>
@@ -415,13 +415,13 @@ export default function Landing() {
             <Link href="/" aria-label="Tidal home" className={styles.home}>
               <Brand />
             </Link>
-            <p className={styles.footerTagline}>Accounting software designed for Singapore businesses.</p>
+            <p className={styles.footerTagline}>Free, open-source accounting software built to support small companies.</p>
           </div>
           <div className={styles.footerLinks}>
             <a href="#features">Features</a>
             <a href="#singapore-gst">Singapore GST</a>
-            <Link href="/login">Sign in</Link>
-            <Link href="/signup">Get started</Link>
+            <a href="https://github.com/jameschia26-design/tidal-opensource">Source code</a>
+            <Link href="/signup">Try the demo</Link>
           </div>
           <div className={styles.footerBottom}>
             <span>Singapore · {new Date().getFullYear()} Tidal. All rights reserved.</span>
