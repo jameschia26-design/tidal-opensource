@@ -1,0 +1,3 @@
+ContactName,FirstName,LastName,EmailAddress,PhoneNumber,POAddressLine1,POCity,POSTaxNumber,AccountsReceivableTaxType,AccountsPayableTaxType
+Acme Pte Ltd,Wei,Tan,acme@example.com,+65 6123 4567,10 Anson Road,Singapore,201912345K,SR,NONE
+Beta Supplies,,,beta@example.com,+65 6123 9999,1 Raffles Place,Singapore,,SR,SR

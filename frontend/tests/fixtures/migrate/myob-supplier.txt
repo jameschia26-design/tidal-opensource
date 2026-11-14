@@ -1,0 +1,2 @@
+Co./Last Name	First Name	Card ID	Card Status	Addr 1 - Line 1	City	Phone 1	Email	Tax Code (AU)	Credit Limit	Record ID
+Office Supplies Pty		SUP001	A	8 Jurong East	Singapore	6567890123	orders@officesupplies.sg	GST	1000.00	2

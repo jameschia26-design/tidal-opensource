@@ -1,0 +1,36 @@
+# Two services, one private network. PostgreSQL has no published port.
+# Secrets come from backend/.env (not committed). See backend/.env.example.
+# From repo root: docker compose --env-file backend/.env up --build
+services:
+  tidal-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tidal
+      POSTGRES_USER: tidal
+      POSTGRES_PASSWORD: ${TIDAL_DB_PASSWORD:?set TIDAL_DB_PASSWORD}
+    volumes:
+      - tidal-db-data:/var/lib/postgresql/data
+    networks: [tidal-internal]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tidal -d tidal"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  tidal-api:
+    build: ./backend
+    restart: unless-stopped
+    env_file: ./backend/.env
+    depends_on:
+      tidal-db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:8080"
+    networks: [tidal-internal]
+
+networks:
+  tidal-internal:
+
+volumes:
+  tidal-db-data:

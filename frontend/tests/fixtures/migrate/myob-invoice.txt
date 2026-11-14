@@ -1,0 +1,2 @@
+Co./Last Name	Addr 1 - Line 1	Inclusive	Invoice No.	Date	Customer PO	Delivery Status	Description	Account No.	Amount	Tax Code	Tax Amount	Freight Amount	Sale Status	Currency Code	Terms - Payment is Due	Amount Paid	Card ID	Record ID
+Acme Pty	10 Anson Road	N	INV-2001	15/03/2026	PO-88	I	Consulting hours	4000	1000.00	GST	90.00	0.00	I	SGD	30	0.00	ACM001	1

@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+!.env.cohost.example
+node_modules/
+.next/
+.vercel/
+.lavish/
+coverage/
+*.log
+backend/tidal
+.vercel
+.env*
+!.env.example
+!.env.cohost.example
+**/.smoke/
+__pycache__/
+*.pyc
+
+# Local reference & reverse-engineering assets
+.pi/
+Xero map.json
+Xero_screenshots/
+docs/xero-*
+docs/check-xero-docs.py
+docs/compare-xero-screenshots.py
+

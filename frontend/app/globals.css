@@ -1,0 +1,127 @@
+/* Design tokens. Plan review reads these names directly.
+   Palette: one green accent on neutral paper, pine ink. No blue/cyan product accents. */
+:root {
+  --color-ink: #112622;            /* body text: deep pine ink */
+  --color-ink-muted: #4a5c56;      /* secondary text (>= 4.5:1 on surface) */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f6f2;
+  --color-border: #dfe5dd;
+  --color-border-strong: #b9c4bf;
+  --color-brand: #11382f;          /* Tidal forest green: sole product accent; lime below is a 3px mark-only support token, not a second accent */
+  --color-brand-strong: #0b241e;
+  --color-brand-hover: #0b241e;    /* button fill on hover; white text stays >= 9:1 */
+  --color-brand-text: #11382f;     /* brand green used AS TEXT/outline on the page surface; lightens in dark mode (brand itself is a fill) */
+  --color-brand-accent: #d2f26b;   /* Tidal lime support token: 3px marks on dark surfaces only, never text on white, never charts/typography */
+  --color-focus: #11382f;          /* keyboard focus ring */
+  --color-danger: #a4262c;         /* semantic form-error state only, not a product accent */
+  --color-success: #17693f;        /* semantic success state only, not a product accent */
+  --chart-revenue: #11382f;        /* brand green */
+  --chart-spending: #55635d;       /* neutral grey; labels carry the meaning, not hue */
+  --chart-cost: #7d9a90;           /* muted green, same family as the accent */
+  --chart-profit: #0b2a23;
+
+  --font-sans: var(--ff-body), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* One type scale: 12 / 13 / 15 / 18 / 24 / 32. Weights 400, 500, 600 only. */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --leading-tight: 1.2;
+  --leading-body: 1.55;
+  --tracking-tight: -0.015em;
+  --shadow-sm: 0 1px 2px rgba(11, 36, 30, 0.06), 0 1px 3px rgba(11, 36, 30, 0.04);
+  --shadow-md: 0 4px 14px rgba(11, 36, 30, 0.08);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --max-width: 74rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-ink: #eef3f0;
+    --color-ink-muted: #aab8b2;
+    --color-surface: #0d1714;
+    --color-surface-alt: #131f1b;
+    --color-border: #2a3a34;
+    --color-border-strong: #41554d;
+    --color-brand: #11382f;
+    --color-brand-strong: #eef3f0;
+    --color-brand-text: #9fe0c5;
+    --color-brand-hover: #1b4e42;
+    --color-brand-accent: #d2f26b;
+    --color-focus: #9fe0c5;
+    --color-danger: #ff8b8b;
+    --color-success: #7fd8a8;
+    --chart-revenue: #7fd8b8;
+    --chart-spending: #9aa8a2;
+  --chart-cost: #5c7d72;
+  --chart-profit: #9fe0c8;
+    --chart-cost: #5c7d72;
+    --chart-profit: #9fe0c8;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-ink: #eef3f0;
+  --color-ink-muted: #aab8b2;
+  --color-surface: #0d1714;
+  --color-surface-alt: #131f1b;
+  --color-border: #2a3a34;
+  --color-border-strong: #41554d;
+  --color-brand: #11382f;
+  --color-brand-strong: #eef3f0;
+  --color-brand-text: #9fe0c5;
+  --color-brand-hover: #1b4e42;
+  --color-brand-accent: #d2f26b;
+  --color-focus: #9fe0c5;
+  --color-danger: #ff8b8b;
+  --color-success: #7fd8a8;
+  --chart-revenue: #7fd8b8;
+  --chart-spending: #9aa8a2;
+  --chart-cost: #5c7d72;
+  --chart-profit: #9fe0c8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-surface);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  font-feature-settings: "cv11", "ss01";
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a { color: var(--color-brand-text); }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+.skip-link {
+  position: absolute; left: var(--space-4); top: -100px; background: var(--color-surface);
+  padding: var(--space-2) var(--space-4); z-index: 10;
+}
+.skip-link:focus { top: var(--space-2); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

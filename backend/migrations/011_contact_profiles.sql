@@ -1,0 +1,15 @@
+ALTER TABLE contacts
+  ADD COLUMN contact_type text NOT NULL DEFAULT 'business' CHECK (contact_type IN ('business', 'individual')),
+  ADD COLUMN company_name text NOT NULL DEFAULT '' CHECK (length(company_name) <= 200),
+  ADD COLUMN first_name text NOT NULL DEFAULT '' CHECK (length(first_name) <= 100),
+  ADD COLUMN last_name text NOT NULL DEFAULT '' CHECK (length(last_name) <= 100),
+  ADD COLUMN phone text NOT NULL DEFAULT '' CHECK (length(phone) <= 40),
+  ADD COLUMN mobile text NOT NULL DEFAULT '' CHECK (length(mobile) <= 40),
+  ADD COLUMN website text NOT NULL DEFAULT '' CHECK (length(website) <= 300),
+  ADD COLUMN uen text NOT NULL DEFAULT '' CHECK (uen = '' OR uen ~ '^[A-Z0-9]{8,10}$'),
+  ADD COLUMN gst_number text NOT NULL DEFAULT '' CHECK (length(gst_number) <= 30),
+  ADD COLUMN payment_terms_days integer NOT NULL DEFAULT 30 CHECK (payment_terms_days BETWEEN 0 AND 365),
+  ADD COLUMN billing_address jsonb NOT NULL DEFAULT '{}' CHECK (jsonb_typeof(billing_address) = 'object'),
+  ADD COLUMN shipping_address jsonb NOT NULL DEFAULT '{}' CHECK (jsonb_typeof(shipping_address) = 'object'),
+  ADD COLUMN notes text NOT NULL DEFAULT '' CHECK (length(notes) <= 4000),
+  ADD COLUMN updated_at timestamptz NOT NULL DEFAULT now();

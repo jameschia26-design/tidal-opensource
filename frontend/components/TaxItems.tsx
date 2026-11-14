@@ -1,0 +1,11 @@
+"use client";
+import { useId } from "react";
+import MoneyField from "@/components/MoneyField";
+
+export type TaxItem = { label: string; amount: string; reason: string; ref: string };
+export const blankTaxItem = (): TaxItem => ({ label: "", amount: "", reason: "", ref: "" });
+export default function TaxItems({ title, help, items, onChange, options }: { title: string; help: string; items: TaxItem[]; onChange: (items: TaxItem[]) => void; options?: { value: string; label: string }[] }) {
+  const id = useId();
+  const set = (index: number, key: keyof TaxItem, value: string) => onChange(items.map((item, i) => i === index ? { ...item, [key]: value } : item));
+  return <fieldset><legend>{title}</legend><p className="section-help">{help}</p>{items.length === 0 && <p className="muted">No items entered.</p>}{items.map((item, i) => <fieldset key={i}><legend>Item {i + 1}</legend><div className="form-grid"><div><label htmlFor={`${id}-${i}`}>{options ? "Relief type" : "Description"}</label>{options ? <select id={`${id}-${i}`} value={item.label} required onChange={e => set(i, "label", e.target.value)}><option value="">Choose relief</option>{options.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select> : <input id={`${id}-${i}`} required maxLength={200} value={item.label} onChange={e => set(i, "label", e.target.value)} />}</div><MoneyField label="Amount (SGD)" value={item.amount} onChange={value => set(i, "amount", value)} /><div><label htmlFor={`${id}-${i}-reason`}>Reason / eligibility <span className="field-optional">Optional</span></label><input id={`${id}-${i}-reason`} maxLength={1000} value={item.reason} onChange={e => set(i, "reason", e.target.value)} /></div><div><label htmlFor={`${id}-${i}-ref`}>Supporting reference <span className="field-optional">Optional</span></label><input id={`${id}-${i}-ref`} maxLength={200} value={item.ref} onChange={e => set(i, "ref", e.target.value)} /></div></div><button className="button-secondary" type="button" onClick={() => onChange(items.filter((_, index) => index !== i))}>Remove item {i + 1}</button></fieldset>)}<button className="button-secondary" type="button" disabled={items.length >= 200} onClick={() => onChange([...items, blankTaxItem()])}>Add item</button></fieldset>;
+}

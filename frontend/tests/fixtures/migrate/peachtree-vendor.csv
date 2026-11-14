@@ -1,0 +1,2 @@
+Vendor ID,Vendor Name,Inactive,Contact,Address-Line 1,Address-Line 2,City,State,Zip Code,Country,Vendor Type,1099 Type,Telephone 1,Telephone 2,Fax Number,Vendor Email,Vendor Web Site,G/L Purchase Account,Tax ID Number,Account Number,Ship Via,Use Standard Terms,Terms Type,Due Days,Credit Limit,Purchase Rep,Current Balance
+VEND-001,Office Supplies Pte Ltd,False,Orders,8 Jurong East,Unit 3,Singapore,,609601,SG,Supplier,0,6567890123,,,orders@officesupplies.sg,,6000,,SUP-77,,False,False,30,1000.00,,450.75

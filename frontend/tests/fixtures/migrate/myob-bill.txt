@@ -1,0 +1,2 @@
+Co./Last Name	Addr 1 - Line 1	Inclusive	Purchase No.	Supplier Invoice No.	Date	Purchase Status	Description	Account No.	Amount	Tax Code	Tax Amount	Freight Amount	Currency Code	Terms - Payment is Due	Amount Paid	Card ID	Record ID
+Office Supplies Pty	8 Jurong East	N	PO-3001	SUP-991	20/03/2026	I	Office supplies	6000	450.75	GST	40.57	0.00	SGD	30	0.00	SUP001	2

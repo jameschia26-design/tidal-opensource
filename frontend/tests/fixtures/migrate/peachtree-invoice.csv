@@ -1,0 +1,2 @@
+Customer ID,Customer Name,Invoice/CM #,Apply to Invoice Number,Date,Ship By,Quote,Quote #,Quote Good Thru Date,Drop Ship,Ship to Name,Customer PO,Date Due,Sales Representative ID,Accounts Receivable Account,Accounts Receivable Amount,Number of Distributions,Invoice/CM Distribution,Quantity,Item ID,Description,G/L Account,Unit Price,Amount
+CUST-001,Acme Pte Ltd,SI-1001,,03/15/2025,,,,,,,PO-77,04/14/2025,,1100,1000.00,2,1,2,ITEM-001,Consulting hours,4000,500.00,1000.00

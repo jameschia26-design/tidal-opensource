@@ -1,0 +1,2 @@
+Vendor ID,Vendor Name,Invoice #,Apply to Invoice #,Date,Drop Ship,Customer SO #,Waiting on Bill,Customer ID,Date Due,Accounts Payable Account,Accounts Payable Amount,Number of Distributions,Invoice/CM Distribution,Quantity,Item ID,Description,G/L Account,Unit Price,Amount
+VEND-001,Office Supplies Pte Ltd,BILL-5001,,03/20/2025,,,,,04/19/2025,2000,450.75,1,1,1,,Office supplies,6000,450.75,450.75

@@ -1,0 +1,6 @@
+Account ID,Account Description,Account Type,Inactive,G/L Account,Current Balance
+1000,Petty Cash,0,False,1000,500.00
+1200,Accounts Receivable,1,False,1200,2340.50
+2000,Accounts Payable,10,False,2000,1100.25
+4000,Sales Income,21,False,4000,0.00
+5000,Office Expenses,24,False,5000,0.00

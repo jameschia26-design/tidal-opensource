@@ -1,0 +1,64 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: tidal_test
+          POSTGRES_USER: tidal_test
+          POSTGRES_PASSWORD: test-only-local-ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U tidal_test -d tidal_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      TEST_DATABASE_URL: postgres://tidal_test:test-only-local-ci@localhost:5432/tidal_test?sslmode=disable
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+          cache: false  # no cache: keeps GitHub Actions storage within the free quota
+      - run: go vet ./...
+      - name: Install govulncheck
+        run: go install golang.org/x/vuln/cmd/govulncheck@latest
+      - name: Scan for reachable vulnerabilities
+        run: govulncheck ./...
+      - name: Fail if database tests cannot run
+        run: 'test -n "$TEST_DATABASE_URL" || { echo "TEST_DATABASE_URL is required, database tests must not be skipped"; exit 1; }'
+      - name: Run database-backed tests (no failures, no skips)
+        shell: bash
+        run: |
+          set -o pipefail
+          go test -race -count=1 -v ./... | tee /tmp/go-test.log
+          bash ./check-test-log.sh /tmp/go-test.log
+      - run: go build ./...
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run check
+      - run: npm audit --omit=dev --audit-level=high

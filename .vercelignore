@@ -1,0 +1,8 @@
+.env*
+**/.env*
+.git/
+.lavish/
+backend/
+**/.smoke/
+**/node_modules/
+**/.next/

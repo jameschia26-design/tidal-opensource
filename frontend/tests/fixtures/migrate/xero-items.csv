@@ -1,0 +1,2 @@
+ItemCode,ItemName,Description,PurchaseDescription,UnitPrice,SalesAccountCode,PurchaseAccountCode,TaxType
+CONSULT-1,Consulting hour,Hourly consulting,Hourly consulting,150.00,610,200,SR

@@ -1,0 +1,4 @@
+Code,Name,Type,TaxDefault,Description
+200,Office Expenses,EXP,NONE,
+400,Sales,REVENUE,SR,
+610,Consulting Income,REVENUE,SR,

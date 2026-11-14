@@ -1,0 +1,3 @@
+Item Number	Item Name	Buy	Sell	Inventory	Income Acct	Expense/COS Acct	Description	Selling Price	Standard Cost	Tax Code When Sold
+ITEM-1	Consulting	X		No	4000	6000	Consulting hour	150.00	0.00	GST
+ITEM-2	Office Chair	X	X	Yes	4000	5000	Ergonomic chair	299.00	120.00	GST

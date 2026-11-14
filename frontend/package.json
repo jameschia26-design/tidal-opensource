@@ -1,0 +1,30 @@
+{
+  "name": "tidal-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --test --experimental-strip-types tests/auth-destination.test.mjs tests/nav.test.mjs tests/company-sharing.test.mjs tests/profile.test.mjs tests/proxy.test.mjs tests/tax-inputs.test.mjs tests/item-scan.test.mjs tests/credit-gst.test.mjs tests/company-address.test.mjs tests/import-templates.test.mjs tests/dates.test.mjs tests/csv.test.mjs tests/migrate.test.mjs tests/fiscal-year.test.mjs tests/limits.test.mjs tests/audit-history.test.mjs tests/feature-flows.test.mjs tests/ci-gate.test.mjs tests/account-class.test.mjs tests/report-shape.test.mjs tests/dashboard.test.mjs tests/tax-model.test.mjs tests/document-lifecycle.test.mjs tests/report-controls.test.mjs tests/report-presets.test.mjs tests/project-estimates.test.mjs tests/tracking.test.mjs tests/banking.test.mjs tests/fx-gst.test.mjs tests/a11y-script.test.mjs tests/register-parity.test.mjs",
+    "check": "npm run typecheck && npm test && npm run build",
+    "a11y": "node scripts/a11y-check.mjs",
+    "shots": "node scripts/ui-shots.mjs"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.3",
+    "playwright": "^1.64.1",
+    "typescript": "^5.9.3"
+  }
+}

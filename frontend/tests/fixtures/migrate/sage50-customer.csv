@@ -1,0 +1,2 @@
+CustomerID,CustomerName,Address1,Town,CountryCode,ContactName,Phone,Email,Balance
+GBWebOrders,Mooncup UK,Web Sales,Web Site,GB,Accounts,02079460000,orders@example.com,100.00

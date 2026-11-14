@@ -1,0 +1,35 @@
+{
+  "source": "2024-BDO-Singapore-Illustrative-Annual-Report.pdf",
+  "sourceUrl": "https://www.bdo.com.sg/getattachment/39247be8-6efe-4100-962c-a8e9016018ea/2024-BDO-Singapore-Illustrative-Annual-Report.pdf",
+  "downloaded": "2026-10-31",
+  "entity": "ABC Singapore Limited and its subsidiaries (illustrative group)",
+  "financialYearEnd": "2024-12-31",
+  "yearOfAssessment": 2025,
+  "notes": "Group illustrative statements. Amounts in whole Singapore dollars; the PDF states $'000.",
+  "incomeStatement": {
+    "revenue2024": 75278000,
+    "revenue2023": 66517000,
+    "profitBeforeTaxContinuing2024": 10896000,
+    "profitBeforeTaxDiscontinued2024": 462000,
+    "incomeTaxExpenseContinuing2024": 2794000,
+    "shareOfAssociatesNetOfTax2024": 660000,
+    "shareOfJointVentureNetOfTax2024": 100000
+  },
+  "taxNote": {
+    "statutoryRateBP": 1700,
+    "baseForStatutoryRate2024": 10598000,
+    "taxAtStatutoryRate2024": 1801000,
+    "totalTaxExpense2024": 2882000,
+    "reconciliationItems": [
+      {"label": "Effect of different tax rates of overseas operations", "amount": 606000},
+      {"label": "Effect of income not subject to tax", "amount": -532000},
+      {"label": "Effect of non-allowable items", "amount": 992000},
+      {"label": "Utilisation of previously unrecognised tax losses", "amount": -85000},
+      {"label": "Under/(over) provision in prior years", "amount": 100000}
+    ]
+  },
+  "balanceSheet": {
+    "totalAssets2024": 127606000,
+    "totalAssets2023": 118761000
+  }
+}

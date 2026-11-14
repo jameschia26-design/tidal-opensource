@@ -1,0 +1,4 @@
+# Cohost api build context (repo root) needs only the tested binary. Everything
+# else, including local env files, stays out of the image build context.
+*
+!tidal
