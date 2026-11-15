@@ -2,6 +2,12 @@
 
 Free, open-source, browser-based accounting for small businesses. Tidal is built with Next.js, Go and PostgreSQL, and can be self-hosted.
 
+- Hosted demo: https://tidal-acc.vercel.app (sign-in required; demo data purge is not configured yet)
+- Project site: https://tidal-acc.vercel.app
+- Source: https://github.com/jameschia26-design/tidal-opensource
+
+For help deploying Tidal for your organization, contact the project administrator through GitHub.
+
 **Preview software — not yet ready for real company books.** Core database workflows, email-code delivery, Google sign-in, deployment, backups and restore have not all passed end-to-end acceptance. Tax worksheets are not filed returns. See [current limits](frontend/app/limits/page.tsx) and the self-hosting example in `compose.yaml`.
 
 ## Features
@@ -40,7 +46,7 @@ Database integration tests require a disposable `TEST_DATABASE_URL`; tests erase
 
 ## Security and deployment
 
-Do not commit secrets, customer data, database backups or production settings. Review `docker-compose.yml` and `backend/.env.example` before self-hosting. Do not deploy this preview to production accounting workloads until authentication, data integrity, backups and restore have been independently verified.
+Do not commit secrets, customer data, database backups or production settings. Review `compose.yaml` and `backend/.env.example` before self-hosting. Do not deploy this preview to production accounting workloads until authentication, data integrity, backups and restore have been independently verified.
 
 ## License
 

@@ -107,7 +107,7 @@ export default function Landing() {
               Singapore GST
             </a>
             <a href="https://github.com/jameschia26-design/tidal-opensource" className={styles.signIn}>
-              Open source
+              Source code
             </a>
             <Link href="/signup" className={styles.navCta}>
               Try the demo <Arrow diagonal />
@@ -402,7 +402,7 @@ export default function Landing() {
               </div>
             </div>
             <p className={styles.previewNote}>
-              The hosted version is a demo, not for real company books. Want to deploy Tidal for your organization? Contact the project administrator through the project repository for support. Tidal's source is free; your own hosting and operations may have costs.
+              The hosted version is a demo, not for real company books. Want to deploy Tidal for your organization? Contact the project administrator through the <a href="https://github.com/jameschia26-design/tidal-opensource">project repository</a>. Tidal's source is free; your own hosting and operations may have costs.
             </p>
           </div>
         </section>
@@ -420,7 +420,7 @@ export default function Landing() {
           <div className={styles.footerLinks}>
             <a href="#features">Features</a>
             <a href="#singapore-gst">Singapore GST</a>
-            <a href="https://github.com/jameschia26-design/tidal-opensource">Source code</a>
+            <a href="https://github.com/jameschia26-design/tidal-opensource">Open-source project</a>
             <Link href="/signup">Try the demo</Link>
           </div>
           <div className={styles.footerBottom}>
