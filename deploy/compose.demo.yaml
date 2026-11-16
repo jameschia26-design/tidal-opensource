@@ -1,0 +1,19 @@
+services:
+  api:
+    image: tidal-demo-api:latest
+    container_name: tidal-demo-api
+    restart: unless-stopped
+    env_file: .env.demo
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.tidal-acc-api.rule=Host(`tidal-acc-api.goodsoil.cc`)
+      - traefik.http.routers.tidal-acc-api.entrypoints=websecure
+      - traefik.http.routers.tidal-acc-api.tls.certresolver=letsencrypt
+      - traefik.http.services.tidal-acc-api.loadbalancer.server.port=8080
+
+networks:
+  dokploy-network:
+    external: true

@@ -38,6 +38,9 @@ function SignupForm() {
 
   return (
     <AuthShell title="Create your account" subtitle="Your company is set up after you sign in.">
+      <div style={{ background: "rgba(245, 158, 11, 0.08)", border: "1px solid rgba(245, 158, 11, 0.35)", borderRadius: "6px", padding: "0.75rem 1rem", marginBottom: "1.25rem", fontSize: "0.85rem", lineHeight: "1.4" }}>
+        <strong>Public Demo Instance:</strong> All accounts and data are automatically purged after 7 days. Need a permanent deployment for your organization? Contact <a href="mailto:admin@goodsoil.cc" style={{ textDecoration: "underline", color: "inherit" }}>admin@goodsoil.cc</a>.
+      </div>
       <form onSubmit={submit} noValidate>
         <label htmlFor="email">Work email</label>
         <input id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} />

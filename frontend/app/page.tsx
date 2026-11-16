@@ -122,14 +122,14 @@ export default function Landing() {
           <div className={styles.heroCopy}>
             <div className={styles.pillBadge}>
               <span className={styles.pillDot} />
-              <span>FREE, OPEN-SOURCE ACCOUNTING FOR SMALL BUSINESSES</span>
+              <span>FREE, OPEN-SOURCE ACCOUNTING · 7-DAY DEMO RETENTION</span>
             </div>
             <h1 id="hero-title">
               Your books.<br />
               <em>Your control.</em>
             </h1>
             <p className={styles.lead}>
-              Tidal is free accounting software built to support small companies. Use the hosted demo, or self-host it on infrastructure your organization operates—without a Tidal subscription or handing your books to a hosted accounting platform. Your hosting provider may still access infrastructure it manages.
+              Tidal is free, open-source accounting software built to support small companies. Test drive the hosted demo—all demo accounts and data are purged automatically after 7 days. For your permanent books, self-host on your own infrastructure without a Tidal subscription.
             </p>
 
             <div className={styles.actions}>
@@ -402,7 +402,7 @@ export default function Landing() {
               </div>
             </div>
             <p className={styles.previewNote}>
-              The hosted version is a demo, not for real company books. Want to deploy Tidal for your organization? Contact the project administrator through the <a href="https://github.com/jameschia26-design/tidal-opensource">project repository</a>. Tidal's source is free; your own hosting and operations may have costs.
+              This hosted instance is a public demo with a 7-day retention schedule: all accounts and data are purged after 7 days. Want to deploy Tidal for your organization? Contact the administrator at <a href="mailto:admin@goodsoil.cc">admin@goodsoil.cc</a> or visit the <a href="https://github.com/jameschia26-design/tidal-opensource">project repository</a> for deployment guidance.
             </p>
           </div>
         </section>
